@@ -1,0 +1,12 @@
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

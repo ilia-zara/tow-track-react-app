@@ -1,0 +1,17 @@
+.header-menu {
+  flex-grow: 2;
+  align-self: center;
+}
+
+.header-menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+.header-menu-list a {
+  text-decoration: none;
+}

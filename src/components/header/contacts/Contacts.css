@@ -1,0 +1,10 @@
+.contacts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mts,
+.velcom {
+  display: flex;
+  font-size: x-large;
+}
