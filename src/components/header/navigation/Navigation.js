@@ -3,7 +3,7 @@ import NavigationItem from "./navigation-item/NavigationItem.js";
 
 function Navigation({ navList }) {
   const navMenu = navList.map((item) => (
-    <NavigationItem key={item.id} title={item.title} />
+    <NavigationItem key={item.id} title={item.title} link={item.link} />
   ));
 
   return (

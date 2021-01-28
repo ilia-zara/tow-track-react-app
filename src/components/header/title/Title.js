@@ -1,10 +1,11 @@
 import React from "react";
 import "./Title.css";
 
-const Title = ({ title, subTitle }) => (
+const Title = ({ title }) => (
   <div className="header-title">
-    <h1>{title}</h1>
-    <h2>{subTitle}</h2>
+    <h1>
+      Эвакуатор и <br /> автопомощь в Гродно
+    </h1>
   </div>
 );
 

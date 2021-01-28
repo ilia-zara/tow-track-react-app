@@ -1,6 +1,8 @@
 .contacts {
   display: flex;
   justify-content: space-evenly;
+  padding: 5px 0px;
+  background: linear-gradient(to right, white, #74bbd1b3, white);
 }
 
 .mts,

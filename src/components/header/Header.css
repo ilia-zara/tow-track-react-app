@@ -1,7 +1,10 @@
 .header {
   position: sticky;
+  top: 0;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .header-section {
@@ -9,4 +12,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.header-menu {
+  font-size: x-large;
 }

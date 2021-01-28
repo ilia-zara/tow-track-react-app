@@ -7,17 +7,17 @@ import Contacts from "./contacts/Contacts.js";
 
 function Header() {
   const navList = [
-    { id: 1, title: "О нас" },
-    { id: 2, title: "Услуги" },
-    { id: 3, title: "Отзывы" },
-    { id: 4, title: "Контакты" },
+    { id: 1, title: "О нас", link: "/about" },
+    { id: 2, title: "Услуги", link: "/services" },
+    { id: 3, title: "Отзывы", link: "/reviews" },
+    { id: 4, title: "Контакты", link: "/contacts" },
   ];
 
   return (
     <React.Fragment>
       <header className="header">
         <div className="header-section">
-          <Title title="Эвакуатор" subTitle="автопомощь в Гродно" />
+          <Title />
           <Logo />
           <Navigation navList={navList} />
         </div>

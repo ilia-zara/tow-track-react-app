@@ -1,0 +1,16 @@
+.main-banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-banner > img {
+  width: 100%;
+}
+
+.main-banner > p {
+  text-align: center;
+  padding: 10px 0px;
+  color: whitesmoke;
+  background-color: rgb(23, 23, 38);
+  font-size: xx-large;
+}

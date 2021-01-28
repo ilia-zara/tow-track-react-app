@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./NavigationItem.css";
 
-const NavigationItem = ({ title }) => (
+const NavigationItem = ({ title, link }) => (
   <li>
-    <a href="#" className="active-link">
+    <Link to={link} className="active-link">
       {title}
-    </a>
+    </Link>
   </li>
 );
 
