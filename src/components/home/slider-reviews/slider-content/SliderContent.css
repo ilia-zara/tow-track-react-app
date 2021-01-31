@@ -1,0 +1,16 @@
+.active {
+  display: inline-block;
+}
+
+.inactive {
+  display: none;
+}
+
+.slides {
+  max-width: 70%;
+  max-height: 500px;
+  position: relative;
+  background-color: yellowgreen;
+  border-radius: 15px;
+  padding: 20px;
+}

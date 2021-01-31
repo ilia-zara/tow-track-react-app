@@ -1,0 +1,8 @@
+.prev,
+.next {
+  font-size: xxx-large;
+  font-weight: 600;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  z-index: 10;
+}

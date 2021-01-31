@@ -1,21 +1,4 @@
-.about-us-title {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  width: 50%;
-  margin: 50px auto;
-}
-
-.about-us-title > h2 {
-  margin: 10px 50px;
-  font-size: xx-large;
-}
-
-.about-us-title::before,
-.about-us-title::after {
-  display: block;
-  height: 5px;
-  background-color: rgb(23, 23, 38);
-  content: "";
-  flex-grow: 1;
+.about-us-text p {
+  max-width: 80%;
+  margin: 0 auto;
 }

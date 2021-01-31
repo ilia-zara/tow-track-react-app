@@ -1,0 +1,21 @@
+.section-title {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.section-title > h2 {
+  margin: 10px 50px;
+  font-size: xx-large;
+}
+
+.section-title::before,
+.section-title::after {
+  display: block;
+  height: 5px;
+  background-color: rgb(23, 23, 38);
+  content: "";
+  flex-grow: 1;
+}
