@@ -1,0 +1,16 @@
+.slides {
+  max-width: 80%;
+  position: relative;
+  background-color: #1515143b;
+  border-radius: 15px;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slides.active {
+  padding: 20px;
+  margin-bottom: 30px;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

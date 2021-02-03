@@ -1,16 +1,16 @@
-import evacuation from "../../images/evacuation.jpg";
-import offRoadEvacuation from "../../images/offRoadEvacuation.jpg";
-import fuelSapply from "../../images/fuelSapply.jpg";
-import towing from "../../images/towing.jpg";
-import recharge from "../../images/recharge.jpg";
-import soberDriver from "../../images/soberDriver.jpg";
+import evacuation from "media/evacuation.jpg";
+import offRoadEvacuation from "media/offRoadEvacuation.jpg";
+import fuelSapply from "media/fuelSapply.jpg";
+import towing from "media/towing.jpg";
+import recharge from "media/recharge.jpg";
+import soberDriver from "media/soberDriver.jpg";
 
 import React from "react";
 import "./Home.css";
-import MainBanner from "./main-banner/MainBanner.js";
-import AboutUs from "./about-us/AboutUs.js";
-import ServiceList from "./service-list/ServiceList.js";
-import SliderReviews from "./slider-reviews/SliderReviews.js";
+import MainBanner from "components/home-page/main-banner/MainBanner";
+import AboutUs from "components/home-page/about-us/AboutUs";
+import ServiceList from "components/home-page/service-list/ServiceList";
+import SliderReviews from "components/home-page/slider-reviews/SliderReviews";
 
 function Home() {
   const ServiceListImages = [

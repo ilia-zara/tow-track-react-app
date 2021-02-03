@@ -1,5 +1,5 @@
 import "./AboutUs.css";
-import SectionTitle from "../section-title/SectionTitle.js";
+import SectionTitle from "components/section-title/SectionTitle";
 
 const AboutUs = () => (
   <section>

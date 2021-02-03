@@ -1,6 +1,6 @@
 import "./ServiceList.css";
-import SectionTitle from "../section-title/SectionTitle.js";
-import ServiceListItem from "./service-list-item/ServiceListItem.js";
+import SectionTitle from "components/section-title/SectionTitle";
+import ServiceListItem from "components/home-page/service-list/service-list-item/ServiceListItem";
 
 function ServiceList({ services }) {
   const ServList = services.map((item) => (

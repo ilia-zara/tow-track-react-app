@@ -1,5 +1,5 @@
 import "./MainBanner.css";
-import careImg2 from "../../../images/careImg2.png";
+import careImg2 from "media/careImg2.png";
 
 const MainBanner = () => (
   <div className="main-banner">

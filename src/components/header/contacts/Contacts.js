@@ -1,7 +1,7 @@
 import "./Contacts.css";
-import mts32x32 from "../../../images/mts32x32.png";
-import velcom32x32 from "../../../images/velcom32x32.png";
-import Number from "./number/Number.js";
+import mts32x32 from "media/mts32x32.png";
+import velcom32x32 from "media/velcom32x32.png";
+import Number from "components/header/contacts/number/Number";
 
 const Contacts = () => (
   <div className="contacts">

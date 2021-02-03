@@ -1,9 +1,9 @@
 import React from "react";
 import "./Header.css";
-import Logo from "./logo/Logo.js";
-import Title from "./title/Title.js";
-import Navigation from "./navigation/Navigation.js";
-import Contacts from "./contacts/Contacts.js";
+import Logo from "components/header/logo/Logo";
+import Title from "components/header/title/Title";
+import Navigation from "components/header/navigation/Navigation";
+import Contacts from "components/header/contacts/Contacts";
 
 function Header() {
   const navList = [

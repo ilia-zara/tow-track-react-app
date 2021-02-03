@@ -1,0 +1,28 @@
+.prev,
+.next {
+  cursor: pointer;
+  z-index: 9;
+  position: absolute;
+  top: 28%;
+  padding: 7px;
+  font-size: xxx-large;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 0;
+  margin-left: 15px;
+}
+
+.next {
+  right: 0;
+  margin-right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in;
+}

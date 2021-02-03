@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Header from "./components/header/Header.js";
-import Home from "./components/home/Home.js";
-import About from "./components/about/About.js";
-import Services from "./components/services/Services.js";
-import Reviews from "./components/reviews/Reviews.js";
-import Contacts from "./components/contacts/Contacts.js";
+import Header from "components/header/Header";
+import Home from "components/home-page/Home";
+import About from "components/about-page/About";
+import Services from "components/services-page/Services";
+import Reviews from "components/reviews-page/Reviews";
+import Contacts from "components/contacts-page/Contacts";
 
 const RouterApp = () => (
   <React.Fragment>

@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import NavigationItem from "./navigation-item/NavigationItem.js";
+import NavigationItem from "components/header/navigation/navigation-item/NavigationItem";
 
 function Navigation({ navList }) {
   const navMenu = navList.map((item) => (

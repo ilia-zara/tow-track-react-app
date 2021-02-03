@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Logo.css";
-import logo from "../../../images/logo.png";
+import logo from "media/logo.png";
 
 const Logo = () => (
   <div className="logo">

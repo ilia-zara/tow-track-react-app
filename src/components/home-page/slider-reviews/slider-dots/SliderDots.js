@@ -1,6 +1,6 @@
 import React from "react";
 import "./SliderDots.css";
-import SliderData from "../slider-data/SliderData.js";
+import SliderData from "components/home-page/slider-reviews/slider-data/SliderData.js";
 
 function SliderDots(props) {
   return (
