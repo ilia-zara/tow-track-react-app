@@ -8,8 +8,9 @@ import SliderContent from "components/home-page/slider-reviews/slider-content/Sl
 
 function SliderReviews() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const length = SliderData.length - 1;
 
-  /* useEffect(() => {
+  /*   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(
         activeIndex === SliderData.length - 1 ? 0 : activeIndex + 1
@@ -25,14 +26,10 @@ function SliderReviews() {
         <SliderContent activeIndex={activeIndex} />
         <SliderArrows
           prevSlide={() =>
-            setActiveIndex(
-              activeIndex === 0 ? SliderData.length - 1 : activeIndex - 1
-            )
+            setActiveIndex(activeIndex === 0 ? length : activeIndex - 1)
           }
           nextSlide={() =>
-            setActiveIndex(
-              activeIndex === SliderData.length - 1 ? 0 : activeIndex + 1
-            )
+            setActiveIndex(activeIndex === length ? 0 : activeIndex + 1)
           }
         />
         <SliderDots

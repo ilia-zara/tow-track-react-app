@@ -1,0 +1,15 @@
+{
+  "callBackTo": [
+    {
+      "name": "фйцк",
+      "phone": "123",
+      "id": 1
+    },
+    {
+      "name": "Илья",
+      "phone": "375298677461",
+      "id": 2
+    }
+  ],
+  "userLocation": []
+}
