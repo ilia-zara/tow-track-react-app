@@ -25,25 +25,19 @@
   ],
   "userLocation": [
     {
+      "latitude": 53.670707199999995,
+      "longitude": 23.8649344,
+      "dateTime": "2021-02-07T12:55:55.592Z",
       "id": 1
     },
     {
-      "latitude": null,
-      "longitude": null,
-      "userAddress": null,
+      "latitude": 53.670707199999995,
+      "longitude": 23.8649344,
+      "dateTime": "2021-02-07T12:59:25.952Z",
       "id": 2
     },
     {
       "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "latitude": null,
-      "longitude": null,
-      "userAddress": null,
-      "id": 5
     }
   ]
 }

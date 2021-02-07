@@ -5,6 +5,7 @@ const UserGeolocation = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [userAddress, setUserAddress] = useState(null);
+  const dateTime = new Date();
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -21,16 +22,30 @@ const UserGeolocation = () => {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
 
-    getUserAddress();
+    getUserAddress(position.coords.latitude, position.coords.longitude);
+
+    const userLocationData = {
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+      dateTime,
+    };
+
+    fetch("http://localhost:8000/userLocation", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userLocationData),
+    }).then(() => {
+      console.log("new userLocationData added");
+    });
   };
 
-  const getUserAddress = () => {
+  const getUserAddress = (latitude, longitude) => {
     fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=false&key=AIzaSyAN5jMFksQDzva5ZxBVNUQF6uZ8OuIrrM0`
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        setUserAddress(data.results[0].formatted_address);
       })
       .catch((error) => alert(error));
   };

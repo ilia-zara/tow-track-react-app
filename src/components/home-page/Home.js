@@ -6,7 +6,7 @@ import ServiceList from "components/home-page/service-list/ServiceList";
 import SliderReviews from "components/home-page/slider-reviews/SliderReviews";
 import Form from "components/home-page/form-callback/Form";
 import UserGeolocation from "components/home-page/user-geolocation/UserGeolocation";
-/* import UserLocation from "components/home-page/get-user-location/UserLocation"; */
+import Footer from "components/footer/Footer";
 
 function Home() {
   return (
@@ -17,7 +17,7 @@ function Home() {
       <SliderReviews />
       <Form />
       <UserGeolocation />
-      {/* <UserLocation /> */}
+      <Footer />
     </div>
   );
 }

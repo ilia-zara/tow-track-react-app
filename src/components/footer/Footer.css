@@ -1,0 +1,30 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.socials img {
+  width: 70px;
+  height: 70px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border-radius: 10px 10px 0px 0px;
+  color: whitesmoke;
+  background-color: #7c1b8db8;
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
