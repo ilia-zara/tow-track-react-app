@@ -1,0 +1,24 @@
+.services-item {
+  display: flex;
+  align-items: center;
+  margin: 50px 100px;
+}
+
+.services-item-content {
+  width: 50%;
+  padding: 25px;
+}
+
+.services-item p {
+  font-size: larger;
+}
+
+.services-item-img {
+  width: 50%;
+}
+
+.services-item-img img {
+  max-width: 85%;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+}
