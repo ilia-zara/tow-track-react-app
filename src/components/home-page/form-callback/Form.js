@@ -5,10 +5,11 @@ const Form = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const dateTime = new Date();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const userData = { name, phone };
+    const userData = { name, phone, dateTime };
 
     setIsLoading(true);
 
@@ -19,6 +20,8 @@ const Form = () => {
     }).then(() => {
       console.log("new userdata added");
       setIsLoading(false);
+      setName("");
+      setPhone("");
     });
   };
 
@@ -28,16 +31,18 @@ const Form = () => {
       <div className="form-container">
         <form className="form" onSubmit={handleSubmit}>
           <div className={isLoading ? "form-loading" : "not-loading"}>
-            <label>Ваше имя*</label>
+            <label>*Ваше имя</label>
             <input
               type="text"
+              placeholder="Имя"
               required
               value={name}
               onChange={(event) => setName(event.target.value)}
             />
-            <label>Ваш телефон*</label>
+            <label>*Ваш телефон*</label>
             <input
               type="number"
+              placeholder="+375 (__) ___ __ __"
               required
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
