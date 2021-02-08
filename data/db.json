@@ -1,11 +1,6 @@
 {
   "callBackTo": [
     {
-      "name": "фйцк",
-      "phone": "123",
-      "id": 1
-    },
-    {
       "name": "Илья",
       "phone": "375298677461",
       "id": 2
@@ -56,6 +51,20 @@
       "longitude": 23.8649344,
       "dateTime": "2021-02-07T19:40:56.511Z",
       "id": 5
+    }
+  ],
+  "reviews": [
+    {
+      "name": "ilia",
+      "review": "this is the best company that i ever seen",
+      "dateTime": "2021-02-08T20:01:06.519Z",
+      "id": 1
+    },
+    {
+      "name": "Ksusha",
+      "review": "I agree with Ilia ;)",
+      "dateTime": "2021-02-08T20:26:14.431Z",
+      "id": 2
     }
   ]
 }

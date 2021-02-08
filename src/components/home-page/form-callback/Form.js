@@ -28,9 +28,13 @@ const Form = () => {
   return (
     <section>
       <h3>ОСТАЛИСЬ ВОПРОСЫ? МЫ САМИ ПЕРЕЗВОНИМ!</h3>
-      <div className="form-container">
-        <form className="form" onSubmit={handleSubmit}>
-          <div className={isLoading ? "form-loading" : "not-loading"}>
+      <div className="form-callback-container">
+        <form className="form-callback" onSubmit={handleSubmit}>
+          <div
+            className={
+              isLoading ? "form-callback-loading" : "form-callback-not-loading"
+            }
+          >
             <label>*Ваше имя</label>
             <input
               type="text"
@@ -47,7 +51,7 @@ const Form = () => {
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
             />
-            <div className="form-buttons">
+            <div className="form-callback-buttons">
               <input type="submit" value="Отправить" />
               <input
                 type="button"
