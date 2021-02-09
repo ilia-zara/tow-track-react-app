@@ -1,0 +1,8 @@
+.reviews-list-loading {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.726) url("media/load.gif") center / 50px
+    no-repeat;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.5s ease 0s;
+}

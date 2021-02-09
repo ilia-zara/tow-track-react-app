@@ -18,7 +18,6 @@ const AddReview = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviewData),
     }).then(() => {
-      console.log("new reviewData added");
       setIsLoading(false);
       setName("");
       setReview("");

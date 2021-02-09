@@ -7,7 +7,9 @@ const ReviewsList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/reviews")
+    const abortCount = new AbortController();
+
+    fetch("http://localhost:8000/reviews", { signal: abortCount.signal })
       .then((response) => response.json())
       .then(
         (result) => {
@@ -15,16 +17,21 @@ const ReviewsList = () => {
           setItems(result);
         },
         (error) => {
-          setIsLoaded(true);
-          setError(error);
+          if (error.name === "AbortError") {
+            console.log(error.message);
+          } else {
+            setIsLoaded(true);
+            setError(error);
+          }
         }
       );
-  }, []);
+    return () => abortCount.abort();
+  }, [items]);
 
   if (error) {
     return alert("Ошибка загрузки данных");
   } else if (!isLoaded) {
-    return <div>Загрузка...</div>;
+    return <div className="reviews-list-loading"></div>;
   } else {
     return (
       <ul>
