@@ -2,6 +2,7 @@ import "./About.css";
 import AboutUsItem from "components/about-page/about-us-item/AboutUsItem";
 import SectionTitle from "components/section-title/SectionTitle";
 import Footer from "components/footer/Footer";
+import ClickToCall from "components/click-to-call/ClickToCall";
 
 function About() {
   const aboutUsList = [
@@ -43,6 +44,7 @@ function About() {
       <div className="about-us-list">
         <ol>{aboutUsInfo}</ol>
       </div>
+      <ClickToCall />
       <Footer />
     </div>
   );

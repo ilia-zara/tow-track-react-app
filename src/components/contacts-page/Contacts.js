@@ -2,6 +2,7 @@ import evacuator from "media/evacuator.jpg";
 import "./Contacts.css";
 import Footer from "components/footer/Footer";
 import SectionTitle from "components/section-title/SectionTitle";
+import ClickToCall from "components/click-to-call/ClickToCall";
 
 function Contacts() {
   return (
@@ -11,6 +12,7 @@ function Contacts() {
       <div className="contacts-img">
         <img src={evacuator} alt="Фото эвакуатора" />
       </div>
+      <ClickToCall />
       <Footer />
     </div>
   );

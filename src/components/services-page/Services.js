@@ -6,6 +6,7 @@ import "./Services.css";
 import ServicesItem from "components/services-page/services-item/ServicesItem";
 import SectionTitle from "components/section-title/SectionTitle";
 import Footer from "components/footer/Footer";
+import ClickToCall from "components/click-to-call/ClickToCall";
 
 function Services() {
   const serviceList = [
@@ -45,6 +46,7 @@ function Services() {
     <div className="services">
       <SectionTitle title="Наши услуги" />
       <div className="services-list">{serviceInfo}</div>
+      <ClickToCall />
       <Footer />
     </div>
   );

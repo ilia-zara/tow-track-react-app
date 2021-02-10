@@ -1,5 +1,47 @@
-.map-container {
+.geolocation-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.geolocation-container > h3 {
+  margin: 100px auto;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.geolocation-button {
+  max-width: 150px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  background-color: #09b456;
+  color: whitesmoke;
+  outline: 0;
+  transition: all 0.5s ease 0s;
+  font-size: x-large;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.geolocation-button:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  background-color: whitesmoke;
+  color: #09b456;
+}
+
+.geolocation-button:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.geolocation-info {
+  text-align: center;
+  margin: 25px 0px;
+  padding: 10px;
+  background-color: #09b45680;
+  border-radius: 15px;
+  font-size: larger;
 }

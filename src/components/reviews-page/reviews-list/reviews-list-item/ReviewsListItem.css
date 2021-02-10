@@ -1,0 +1,19 @@
+.reviews-item-container {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #1515143b;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+}
+
+.reviews-item-user {
+  margin-bottom: 10px;
+}
+
+.reviews-item-user span {
+  margin-right: 50px;
+  background-color: #7bbee27d;
+  border-radius: 8px;
+  padding: 5px;
+}

@@ -1,6 +1,8 @@
 import "./Reviews.css";
+import Footer from "components/footer/Footer";
 import AddReview from "components/reviews-page/add-review/AddReview";
 import ReviewsList from "components/reviews-page/reviews-list/ReviewsList";
+import ClickToCall from "components/click-to-call/ClickToCall";
 
 function Reviews() {
   return (
@@ -11,6 +13,8 @@ function Reviews() {
       </h3>
       <ReviewsList />
       <AddReview />
+      <ClickToCall />
+      <Footer />
     </div>
   );
 }

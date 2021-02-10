@@ -1,4 +1,5 @@
 import "./ReviewsList.css";
+import ReviewsListItem from "components/reviews-page/reviews-list/reviews-list-item/ReviewsListItem";
 import { useState, useEffect } from "react";
 
 const ReviewsList = () => {
@@ -26,7 +27,16 @@ const ReviewsList = () => {
         }
       );
     return () => abortCount.abort();
-  }, [items]);
+  }, []);
+
+  const allReviews = items.map((item) => (
+    <ReviewsListItem
+      key={item.id}
+      name={item.name}
+      review={item.review}
+      dateTime={item.dateTime}
+    />
+  ));
 
   if (error) {
     return alert("Ошибка загрузки данных");
@@ -34,13 +44,9 @@ const ReviewsList = () => {
     return <div className="reviews-list-loading"></div>;
   } else {
     return (
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.name} {item.review} {item.dateTime}
-          </li>
-        ))}
-      </ul>
+      <section>
+        <ul className="reviews-list">{allReviews}</ul>
+      </section>
     );
   }
 };

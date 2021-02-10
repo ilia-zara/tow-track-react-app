@@ -7,6 +7,7 @@ import SliderReviews from "components/home-page/slider-reviews/SliderReviews";
 import Form from "components/home-page/form-callback/Form";
 import UserGeolocation from "components/home-page/user-geolocation/UserGeolocation";
 import Footer from "components/footer/Footer";
+import ClickToCall from "components/click-to-call/ClickToCall";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <SliderReviews />
       <Form />
       <UserGeolocation />
+      <ClickToCall />
       <Footer />
     </div>
   );

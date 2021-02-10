@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "components/scroll-to-top/ScrollToTop";
 import Header from "components/header/Header";
 import Home from "components/home-page/Home";
 import About from "components/about-page/About";
@@ -11,6 +12,7 @@ import Contacts from "components/contacts-page/Contacts";
 const RouterApp = () => (
   <React.Fragment>
     <Router>
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route exact path="/">

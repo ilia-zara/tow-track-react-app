@@ -1,4 +1,4 @@
-import React, { useState /* useEffect */ } from "react";
+import React, { useState, useEffect } from "react";
 import "./SliderReviews.css";
 import SectionTitle from "components/section-title/SectionTitle";
 import SliderData from "components/home-page/slider-reviews/slider-data/SliderData";
@@ -10,14 +10,14 @@ function SliderReviews() {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = SliderData.length - 1;
 
-  /*   useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(
         activeIndex === SliderData.length - 1 ? 0 : activeIndex + 1
       );
     }, 3000);
     return () => clearInterval(interval);
-  }, [activeIndex]); */
+  }, [activeIndex]);
 
   return (
     <section>

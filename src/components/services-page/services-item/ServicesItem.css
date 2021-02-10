@@ -21,4 +21,11 @@
   max-width: 85%;
   border-radius: 15px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  transition: all 0.5s ease 0s;
+}
+
+.services-item-img img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }

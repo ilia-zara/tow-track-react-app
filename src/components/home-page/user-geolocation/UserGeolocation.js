@@ -5,7 +5,9 @@ const UserGeolocation = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [userAddress, setUserAddress] = useState(null);
-  const dateTime = new Date();
+
+  const dateFormat = require("dateformat");
+  const dateTime = dateFormat(new Date(), " dS, mmmm, yyyy, HH:MM:ss");
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -18,16 +20,20 @@ const UserGeolocation = () => {
     }
   };
 
-  const getCoordinates = (position) => {
+  async function getCoordinates(position) {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
 
-    getUserAddress(position.coords.latitude, position.coords.longitude);
+    await getUserAddress(position.coords.latitude, position.coords.longitude);
 
     const userLocationData = {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
       dateTime,
+      userAddress: getUserAddress(
+        position.coords.latitude,
+        position.coords.longitude
+      ),
     };
 
     fetch("http://localhost:8000/userLocation", {
@@ -35,20 +41,22 @@ const UserGeolocation = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userLocationData),
     }).then(() => {
-      console.log("new userLocationData added");
+      console.log(userLocationData);
     });
-  };
+  }
 
-  const getUserAddress = (latitude, longitude) => {
-    fetch(
+  async function getUserAddress(latitude, longitude) {
+    await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=false&key=AIzaSyAN5jMFksQDzva5ZxBVNUQF6uZ8OuIrrM0`
     )
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setUserAddress(data.results[0].formatted_address);
       })
       .catch((error) => alert(error));
-  };
+    return setUserAddress;
+  }
 
   const handleLocationError = (error) => {
     switch (error.code) {
@@ -74,13 +82,17 @@ const UserGeolocation = () => {
   return (
     <div className="geolocation-container">
       <h3>
-        Включите геолокацию на вашем устройстве, чтобы мы могли быстрее Вас
-        найти
+        Включите геолокацию на вашем устройстве <br /> чтобы мы могли быстрее
+        Вас найти
       </h3>
-      <button onClick={getLocation}>Найти меня</button>
-      <p>Широта: {latitude}</p>
-      <p>Долгота: {longitude}</p>
-      <p>Ваш адрес: {userAddress}</p>
+      <button onClick={getLocation} className="geolocation-button">
+        Найти меня
+      </button>
+      <div className="geolocation-info">
+        <p>Ваша широта: {latitude}</p>
+        <p>Ваша долгота: {longitude}</p>
+        <p>Ваш адрес: {userAddress}</p>
+      </div>
       <div className="map-container">
         {latitude && longitude ? (
           <img

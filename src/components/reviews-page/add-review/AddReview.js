@@ -5,7 +5,9 @@ const AddReview = () => {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const dateTime = new Date();
+
+  const dateFormat = require("dateformat");
+  const dateTime = dateFormat(new Date(), " dS, mmmm, yyyy, HH:MM:ss");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,28 +29,36 @@ const AddReview = () => {
   return (
     <section>
       <div className="review-container">
-        <form className="form-review" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div
             className={
               isLoading ? "form-review-loading" : "form-review-not-loading"
             }
           >
-            <label>Ваше имя</label>
-            <input
-              type="text"
-              placeholder="Имя"
-              required
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-            />
-            <label>Напишите отзыв</label>
-            <textarea
-              rows="10"
-              cols="40"
-              value={review}
-              onChange={(event) => setReview(event.target.value)}
-            />
-            <input type="submit" value="Отправить" />
+            <div className="form-review">
+              <label>Ваше имя</label>
+              <input
+                type="text"
+                placeholder="Имя"
+                required
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+              />
+              <label>Напишите отзыв</label>
+              <textarea
+                rows="10"
+                cols="20"
+                placeholder="Ваш отзыв или предложение"
+                required
+                value={review}
+                onChange={(event) => setReview(event.target.value)}
+              />
+              <input
+                className="form-review-button"
+                type="submit"
+                value="Отправить"
+              />
+            </div>
           </div>
         </form>
       </div>

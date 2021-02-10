@@ -1,0 +1,65 @@
+.form-review {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #1515143b;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  font-size: x-large;
+}
+
+.form-review input,
+textarea {
+  font-size: large;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.form-review > input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  border-radius: 8px;
+}
+
+.form-review > input:hover {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  border-radius: 5px;
+}
+
+.form-review > textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  border-radius: 8px;
+}
+
+.form-review > textarea:hover {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  border-radius: 5px;
+}
+
+.form-review-button {
+  margin: 0 auto;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  background-color: #607bd4;
+  color: whitesmoke;
+  outline: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.form-review-button:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 50%), 0px 2px 4px 5px rgb(0 0 0 / 10%);
+  background-color: whitesmoke;
+  color: #607bd4;
+}
+
+.form-review-button:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
